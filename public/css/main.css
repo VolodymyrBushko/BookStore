@@ -1,0 +1,9 @@
+#nav-mobile i {
+    margin-right: 5px;
+}
+
+#nav-mobile a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}

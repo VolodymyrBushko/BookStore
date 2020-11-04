@@ -14,6 +14,9 @@ const
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// config static
+app.use(express.static(__dirname + '/public'));
+
 // config handlebars
 app.engine('hbs', expressHbs(
   {
@@ -28,10 +31,10 @@ hbs.registerPartials(__dirname + '/views/partials');
 // init routes
 app.use('/', homeRouter);
 
-// run app
+// run app & mongodb
 (async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/mongodb_name', {
+    await mongoose.connect('mongodb://localhost:27017/bookStore', {
       useNewUrlParser: true,
       useUnifiedTopology: true
     });
