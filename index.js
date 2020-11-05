@@ -7,6 +7,10 @@ const
   hbs = require('hbs'),
   // routes
   homeRouter = require('./routes/home'),
+  storeRouter = require('./routes/store'),
+  collectionRouter = require('./routes/collection'),
+  cartRouter = require('./routes/cart'),
+  profileRouter = require('./routes/profile'),
   // other
   app = express();
 
@@ -30,6 +34,10 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 // init routes
 app.use('/', homeRouter);
+app.use('/store', storeRouter);
+app.use('/collection', collectionRouter);
+app.use('/cart', cartRouter);
+app.use('/profile', profileRouter);
 
 // run app & mongodb
 (async () => {
