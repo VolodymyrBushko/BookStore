@@ -1,7 +1,9 @@
 module.exports = {
 
   collection(req, res) {
-    res.render('collection');
+    res.render('collection', {
+      isCollection: true
+    });
   }
 
 }

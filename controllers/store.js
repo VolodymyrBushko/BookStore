@@ -1,7 +1,9 @@
 module.exports = {
 
   store(req, res) {
-    res.render('store');
+    res.render('store', {
+      isStore: true
+    });
   }
 
 }

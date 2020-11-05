@@ -1,7 +1,9 @@
 module.exports = {
 
   home(req, res) {
-    res.render('home');
+    res.render('home', {
+      isHome: true
+    });
   }
 
 }

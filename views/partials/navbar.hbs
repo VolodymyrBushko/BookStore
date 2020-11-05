@@ -3,20 +3,60 @@
     <div class="nav-wrapper">
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li class="active"><a href="/"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="/store"><i class="fas fa-cash-register"></i>Store</a></li>
-        <li><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
-        <li><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
-        <li><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+        {{#if isHome}}
+          <li class="active"><a href="/"><i class="fas fa-home"></i>Home</a></li>
+        {{else}}
+          <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+        {{/if}}
+        {{#if isStore}}
+          <li class="active"><a href="/store"><i class="fas fa-cash-register"></i>Store</a></li>
+        {{else}}
+          <li><a href="/store"><i class="fas fa-cash-register"></i>Store</a></li>
+        {{/if}}
+        {{#if isCollection}}
+          <li class="active"><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
+        {{else}}
+          <li><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
+        {{/if}}
+        {{#if isCart}}
+          <li class="active"><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+        {{else}}
+          <li><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+        {{/if}}
+        {{#if isProfile}}
+          <li class="active"><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+        {{else}}
+          <li><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+        {{/if}}
       </ul>
     </div>
   </nav>
 
   <ul id="mobile-demo" class="sidenav">
-    <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
-    <li><a href="/store"><i class="fas fa-cash-register"></i>Store</a></li>
-    <li><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
-    <li><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
-    <li><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+    {{#if isHome}}
+      <li class="active"><a href="/"><i class="fas fa-home"></i>Home</a></li>
+    {{else}}
+      <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+    {{/if}}
+    {{#if isStore}}
+      <li class="active"><a href="/store"><i class="fas fa-cash-register"></i>Store</a></li>
+    {{else}}
+      <li><a href="/store"><i class="fas fa-cash-register"></i>Store</a></li>
+    {{/if}}
+    {{#if isCollection}}
+      <li class="active"><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
+    {{else}}
+      <li><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
+    {{/if}}
+    {{#if isCart}}
+      <li class="active"><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+    {{else}}
+      <li><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+    {{/if}}
+    {{#if isProfile}}
+      <li class="active"><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+    {{else}}
+      <li><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+    {{/if}}
   </ul>
 </header>
