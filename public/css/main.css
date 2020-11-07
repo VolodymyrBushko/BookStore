@@ -44,7 +44,51 @@ main {
     justify-content: center;
 }
 
-#register-title,
-#register-title h3 {
+#register-title {
     margin-bottom: 0;
+}
+
+#register-title h4 {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#sign-in-link {
+    color: black;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+/* login page */
+#login-wrapper {
+    margin-top: 10%;
+}
+
+#btn-submit-signin {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100px;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+#wrapper-btn-submit-signin {
+    display: flex;
+    justify-content: center;
+}
+
+#login-title {
+    margin-bottom: 0;
+}
+
+#login-title h4 {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#sign-up-link {
+    color: black;
+    text-decoration: underline;
+    font-size: 16px;
 }

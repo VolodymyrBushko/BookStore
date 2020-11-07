@@ -1,3 +1,15 @@
+// validation options
+const options = {
+  focusInvalid: true,
+  debug: false,
+  errorClass: 'invalid',
+  errorElement: 'span',
+  errorPlacement: function ($error, $element) {
+    const name = $element.attr('name');
+    $('#error-' + name).append($error);
+  }
+}
+
 // validation rules for sign up form
 const signUpRules = {
   rules: {
@@ -20,12 +32,21 @@ const signUpRules = {
       equalTo: '#user-password'
     }
   },
-  focusInvalid: true,
-  debug: false,
-  errorClass: 'invalid',
-  errorElement: 'span',
-  errorPlacement: function ($error, $element) {
-    const name = $element.attr('name');
-    $('#error-' + name).append($error);
-  }
+  ...options
+}
+
+// validation rules for sign in form
+const signInRules = {
+  rules: {
+    'user-email': {
+      required: true,
+      email: true
+    },
+    'user-password': {
+      required: true,
+      minlength: 6,
+      maxlength: 16
+    }
+  },
+  ...options
 }

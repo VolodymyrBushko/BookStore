@@ -6,6 +6,12 @@ module.exports = {
     res.render('auth/register', {
       isRegister: true
     });
+  },
+
+  login(req, res) {
+    res.render('auth/login', {
+      isLogin: true
+    });
   }
 
 }
