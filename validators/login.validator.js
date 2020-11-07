@@ -1,4 +1,5 @@
 const {body} = require('express-validator');
+const User = require('../models/User');
 
 module.exports = [
 
@@ -6,6 +7,12 @@ module.exports = [
     .trim()
     .notEmpty()
     .isEmail()
+    .custom(value => {
+      return User.findOne({email: value}).then(user => {
+        if (!user)
+          return Promise.reject('user is not found');
+      });
+    })
     .withMessage('invalid user email'),
 
   body('password')
