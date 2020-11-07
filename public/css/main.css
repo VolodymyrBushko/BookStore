@@ -1,27 +1,12 @@
-/* body */
-body {
+/* root */
+body, html {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
 
-/* main */
-.main {
+main {
     flex: 1 0 auto;
-    display: flex;
-    align-items: stretch;
-}
-
-.main .row {
-    width: 100%;
-    margin-bottom: 0;
-    display: flex;
-    align-items: stretch;
-}
-
-.main .row .col {
-    width: 100%;
-    margin-bottom: 0;
 }
 
 /* navbar */
@@ -41,7 +26,11 @@ body {
 }
 
 /* register page */
-.btn-submit-signup {
+#register-wrapper {
+    margin-top: 5%;
+}
+
+#btn-submit-signup {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -50,14 +39,12 @@ body {
     margin-bottom: 25px;
 }
 
-.wrapper-btn-submit-signup {
+#wrapper-btn-submit-signup {
     display: flex;
     justify-content: center;
 }
 
-#register-wrapper {
-    height: 100%;
-}
-
-#register-form {
+#register-title,
+#register-title h3 {
+    margin-bottom: 0;
 }
