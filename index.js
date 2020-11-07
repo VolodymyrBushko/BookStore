@@ -11,6 +11,7 @@ const
   collectionRouter = require('./routes/collection'),
   cartRouter = require('./routes/cart'),
   profileRouter = require('./routes/profile'),
+  authRouter = require('./routes/auth'),
   // other
   app = express();
 
@@ -38,6 +39,7 @@ app.use('/store', storeRouter);
 app.use('/collection', collectionRouter);
 app.use('/cart', cartRouter);
 app.use('/profile', profileRouter);
+app.use('/auth', authRouter);
 
 // run app & mongodb
 (async () => {

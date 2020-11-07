@@ -1,13 +1,30 @@
+/* body */
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
 
-main {
+/* main */
+.main {
     flex: 1 0 auto;
+    display: flex;
+    align-items: stretch;
 }
 
+.main .row {
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.main .row .col {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* navbar */
 #nav-mobile i {
     margin-right: 5px;
 }
@@ -18,14 +35,29 @@ main {
     font-size: 18px;
 }
 
-/* footer */
-footer .social {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* form errors */
+.error-message {
+    font-size: 12px;
 }
 
-footer .social h5 {
-    margin-left: 10px;
+/* register page */
+.btn-submit-signup {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100px;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.wrapper-btn-submit-signup {
+    display: flex;
+    justify-content: center;
+}
+
+#register-wrapper {
+    height: 100%;
+}
+
+#register-form {
 }

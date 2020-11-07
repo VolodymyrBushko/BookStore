@@ -1,5 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // init hamburger button for navbar
-  const elems = document.querySelectorAll('.sidenav');
-  M.Sidenav.init(elems);
+$(document).ready(() => {
+
+  // init collapse (hamburger) button for navbar
+  $('.sidenav').sidenav();
+
+  // validation for fields of sign up form
+  $('#register-form').validate(signUpRules);
+
 });
