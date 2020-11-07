@@ -13,21 +13,21 @@ const options = {
 // validation rules for sign up form
 const signUpRules = {
   rules: {
-    'user-name': {
+    'name': {
       required: true,
       minlength: 2,
       maxlength: 16
     },
-    'user-email': {
+    'email': {
       required: true,
       email: true
     },
-    'user-password': {
+    'password': {
       required: true,
       minlength: 6,
       maxlength: 16
     },
-    'user-confirm-password': {
+    'confirm-password': {
       required: true,
       equalTo: '#user-password'
     }
@@ -38,11 +38,11 @@ const signUpRules = {
 // validation rules for sign in form
 const signInRules = {
   rules: {
-    'user-email': {
+    'email': {
       required: true,
       email: true
     },
-    'user-password': {
+    'password': {
       required: true,
       minlength: 6,
       maxlength: 16

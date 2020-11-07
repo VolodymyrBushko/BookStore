@@ -4,7 +4,9 @@ const
 
 const router = new Router();
 
-router.get('/register', controller.register);
-router.get('/login', controller.login);
+router.get('/register', controller.getRegister);
+router.get('/login', controller.getLogin);
+router.post('/register', controller.postRegister);
+router.post('/login', controller.postLogin);
 
 module.exports = router;

@@ -1,5 +1,5 @@
 <section id="login-wrapper">
-  <form id="login-form">
+  <form id="login-form" method="post" action="/auth/login">
 
     <div id="login-title" class="row">
       <div class="col s12 m8 offset-m2 l6 offset-l3">
@@ -9,17 +9,17 @@
 
     <div class="row">
       <div class="input-field col s12 m8 offset-m2 l6 offset-l3">
-        <input id="user-email" name="user-email" type="email" class="validate">
+        <input id="user-email" name="email" type="email" class="validate">
         <label for="user-email">Email</label>
-        <div id="error-user-email" class="red-text error-message"></div>
+        <div id="error-email" class="red-text error-message"></div>
       </div>
     </div>
 
     <div class="row">
       <div class="input-field col s12 m8 offset-m2 l6 offset-l3">
-        <input id="user-password" name="user-password" type="password" class="validate">
+        <input id="user-password" name="password" type="password" class="validate">
         <label for="user-password">Password</label>
-        <div id="error-user-password" class="red-text error-message"></div>
+        <div id="error-password" class="red-text error-message"></div>
       </div>
     </div>
 
