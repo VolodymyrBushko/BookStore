@@ -9,13 +9,13 @@ module.exports = {
 
   getRegister(req, res) {
     res.render('auth/register', {
-      isRegister: true
+      isAuthenticate: true
     });
   },
 
   getLogin(req, res) {
     res.render('auth/login', {
-      isLogin: true
+      isAuthenticate: true
     });
   },
 
@@ -48,7 +48,8 @@ module.exports = {
       const valid = await bcrypt.compare(password, hash);
 
       if (valid) {
-        await res.json({message: 'sign in successful'});
+        req.session.isAuthenticated = true;
+        await res.redirect('/');
       } else {
         await res.status(422).json({message: 'invalid password'})
       }
@@ -56,6 +57,10 @@ module.exports = {
     } catch ({message}) {
       await res.status(500).json({message});
     }
+  },
+
+  signOut(req, res) {
+    req.session.destroy(() => res.redirect('/'));
   }
 
 }

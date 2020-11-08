@@ -13,20 +13,29 @@
         {{else}}
           <li><a href="/store"><i class="fas fa-cash-register"></i>Store</a></li>
         {{/if}}
-        {{#if isCollection}}
-          <li class="active"><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
+        {{#if isAuth}}
+          {{#if isCollection}}
+            <li class="active"><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
+          {{else}}
+            <li><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
+          {{/if}}
+          {{#if isCart}}
+            <li class="active"><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+          {{else}}
+            <li><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+          {{/if}}
+          {{#if isProfile}}
+            <li class="active"><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+          {{else}}
+            <li><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+          {{/if}}
+          <li><a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
         {{else}}
-          <li><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
-        {{/if}}
-        {{#if isCart}}
-          <li class="active"><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
-        {{else}}
-          <li><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
-        {{/if}}
-        {{#if isProfile}}
-          <li class="active"><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
-        {{else}}
-          <li><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+          {{#if isAuthenticate}}
+            <li class="active"><a href="/auth/login"><i class="fas fa-sign-in-alt"></i>Authenticate</a></li>
+          {{else}}
+            <li><a href="/auth/login"><i class="fas fa-sign-in-alt"></i>Authenticate</a></li>
+          {{/if}}
         {{/if}}
       </ul>
     </div>
@@ -43,20 +52,29 @@
     {{else}}
       <li><a href="/store"><i class="fas fa-cash-register"></i>Store</a></li>
     {{/if}}
-    {{#if isCollection}}
-      <li class="active"><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
+    {{#if isAuth}}
+      {{#if isCollection}}
+        <li class="active"><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
+      {{else}}
+        <li><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
+      {{/if}}
+      {{#if isCart}}
+        <li class="active"><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+      {{else}}
+        <li><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+      {{/if}}
+      {{#if isProfile}}
+        <li class="active"><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+      {{else}}
+        <li><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+      {{/if}}
+      <li><a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
     {{else}}
-      <li><a href="/collection"><i class="fas fa-book"></i>Collection</a></li>
-    {{/if}}
-    {{#if isCart}}
-      <li class="active"><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
-    {{else}}
-      <li><a href="/cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
-    {{/if}}
-    {{#if isProfile}}
-      <li class="active"><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
-    {{else}}
-      <li><a href="/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+      {{#if isAuthenticate}}
+        <li class="active"><a href="/auth/login"><i class="fas fa-sign-in-alt"></i>Authenticate</a></li>
+      {{else}}
+        <li><a href="/auth/login"><i class="fas fa-sign-in-alt"></i>Authenticate</a></li>
+      {{/if}}
     {{/if}}
   </ul>
 </header>

@@ -2,6 +2,7 @@ const
   // libs
   express = require('express'),
   bodyParser = require('body-parser'),
+  session = require('express-session'),
   expressHbs = require('express-handlebars'),
   mongoose = require('mongoose'),
   hbs = require('hbs'),
@@ -13,6 +14,7 @@ const
   profileRouter = require('./routes/profile'),
   authRouter = require('./routes/auth'),
   // other
+  authMw = require('./middlewares/auth.middleware'),
   app = express();
 
 // config body-parser
@@ -21,6 +23,13 @@ app.use(bodyParser.json());
 
 // config static
 app.use(express.static(__dirname + '/public'));
+
+// config session
+app.use(session({
+  secret: 'my test secret',
+  saveUninitialized: false,
+  resave: false
+}));
 
 // config handlebars
 app.engine('hbs', expressHbs(
@@ -32,6 +41,9 @@ app.engine('hbs', expressHbs(
 ));
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
+
+// use auth middleware
+app.use(authMw);
 
 // init routes
 app.use('/', homeRouter);
